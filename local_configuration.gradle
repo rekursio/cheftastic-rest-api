@@ -1,0 +1,17 @@
+ext {
+    // Library version
+    version_major = 1
+    version_minor = 0
+    version_patch = 0
+
+    // @version_build only modify the version code, no the version name
+    // It is used for release candidate (RC0, RC1, RC2...), beta, alpha, etc...
+    version_build = 0
+
+    lib_config = [
+            group                   : 'io.rekursio',
+            version                 : "$version_major.$version_minor.$version_patch",
+            source_compatibility    : 1.8,
+            coroutines_support      : 'enable'
+    ]
+}

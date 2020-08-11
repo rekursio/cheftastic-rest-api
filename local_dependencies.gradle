@@ -1,0 +1,11 @@
+ext {
+
+    common_libraries_versions = [
+            ktor    : '1.3.2'
+    ]
+
+    common_libraries = [
+            ktor        : "io.ktor:ktor-server-core:${common_libraries_versions.ktor}",
+            ktor_netty  : "io.ktor:ktor-server-netty:${common_libraries_versions.ktor}"
+    ]
+}

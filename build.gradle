@@ -1,0 +1,18 @@
+buildscript {
+
+    apply from: 'https://raw.githubusercontent.com/rekursio/rest-kotlin-remote-config/main/private-repos.gradle'
+    apply from: github('rekursio', 'rest-kotlin-remote-config', 'configuration.gradle', '8c79ded')
+    apply from: github('rekursio', 'rest-kotlin-remote-config', 'dependencies.gradle', '8c79ded')
+
+    apply from: 'local_configuration.gradle'
+    apply from: 'local_dependencies.gradle'
+
+    dependencies {
+        classpath gradle_plugins.kotlin_gradle_plugin
+    }
+
+    repositories {
+        mavenCentral()
+    }
+
+}
