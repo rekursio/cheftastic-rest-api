@@ -1,11 +1,13 @@
 ext {
 
-    common_libraries_versions = [
-            ktor    : '1.3.2'
+    local_libraries_versions = [
+            ktor            : '1.3.2',
+            logback_classic : '1.2.3'
     ]
 
-    common_libraries = [
-            ktor        : "io.ktor:ktor-server-core:${common_libraries_versions.ktor}",
-            ktor_netty  : "io.ktor:ktor-server-netty:${common_libraries_versions.ktor}"
+    local_libraries = [
+            ktor            : "io.ktor:ktor-server-core:${local_libraries_versions.ktor}",
+            ktor_netty      : "io.ktor:ktor-server-netty:${local_libraries_versions.ktor}",
+            logback_classic : "ch.qos.logback:logback-classic:${local_libraries_versions.logback_classic}"
     ]
 }
