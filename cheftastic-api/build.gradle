@@ -1,4 +1,5 @@
 apply plugin: 'kotlin'
+apply plugin: 'com.github.johnrengelman.shadow'
 
 // Library configuration
 group   lib_config.group
@@ -12,9 +13,10 @@ compileKotlin {
 compileTestKotlin {
     kotlinOptions.jvmTarget = "${lib_config.source_compatibility}"
 }
-kotlin {
-    experimental {
-        coroutines lib_config.coroutines_support
+
+shadowJar {
+    manifest {
+        attributes 'Main-Class': 'io.ktor.server.netty.EngineMain'
     }
 }
 

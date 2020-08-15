@@ -1,0 +1,5 @@
+{
+  "name": "Cheftastic REST API",
+  "description": "Our beloved recipes REST API, may Cthulhu bless it",
+  "image": "heroku/java"
+}
