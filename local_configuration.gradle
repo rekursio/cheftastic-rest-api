@@ -11,7 +11,6 @@ ext {
     lib_config = [
             group                   : 'io.rekursio',
             version                 : "$version_major.$version_minor.$version_patch",
-            source_compatibility    : 1.8,
-            coroutines_support      : 'enable'
+            source_compatibility    : 1.8
     ]
 }
