@@ -1,0 +1,14 @@
+apply plugin: 'kotlin'
+
+// Library dependencies
+dependencies {
+    implementation libraries.kotlin
+
+    // Ktor
+    implementation common_libraries.ktor
+
+    // Test
+    testImplementation project(':rekursio-kotlin-test-common')
+    testImplementation common_libraries.kotlin_test_junit
+    testImplementation common_libraries.mockito_kotlin
+}

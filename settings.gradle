@@ -1,2 +1,4 @@
 include ':cheftastic-api'
+include ':rekursio-kotlin-test-common'
+include ':rekursio-rest-i18n'
 
