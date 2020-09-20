@@ -1,0 +1,11 @@
+apply plugin: 'kotlin'
+
+// Library dependencies
+dependencies {
+    implementation libraries.kotlin
+    implementation local_libraries.ktor_auth
+    implementation project(':rekursio-rest-error')
+
+    // Test
+    testImplementation common_libraries.kotlin_test_junit
+}
