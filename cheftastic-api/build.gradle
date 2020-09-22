@@ -25,7 +25,7 @@ dependencies {
     implementation libraries.kotlin
 
     // Ktor
-    implementation local_libraries.ktor
+    implementation common_libraries.ktor
     implementation local_libraries.ktor_netty
 
     // Logging
