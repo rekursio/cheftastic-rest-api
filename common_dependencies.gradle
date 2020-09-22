@@ -6,7 +6,7 @@ ext {
     ]
 
     common_libraries_versions = [
-            kotlin_serialization    : '1.0.0-RC',
+            kotlin_serialization    : '0.20.0',
             ktor                    : '1.3.2',
 
             // Test
@@ -16,7 +16,7 @@ ext {
     common_gradle_plugins = []
 
     common_libraries = [
-            kotlin_serialization    : "org.jetbrains.kotlinx:kotlinx-serialization-core:${common_libraries_versions.kotlin_serialization}",
+            kotlin_serialization    : "org.jetbrains.kotlinx:kotlinx-serialization-runtime:${common_libraries_versions.kotlin_serialization}",
             ktor                    : "io.ktor:ktor-server-core:${common_libraries_versions.ktor}",
             ktor_serialization      : "io.ktor:ktor-serialization:${common_libraries_versions.ktor}",
 

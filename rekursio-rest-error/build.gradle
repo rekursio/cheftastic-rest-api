@@ -3,9 +3,13 @@ apply plugin: 'kotlinx-serialization'
 
 // Library dependencies
 dependencies {
+    // Kotlin
     implementation libraries.kotlin
-    implementation common_libraries.ktor
-    // TODO: Replace with common_libraries.kotlin_serialization once version 1.0.0 is released
-    implementation common_libraries.ktor_serialization
+    implementation common_libraries.kotlin_serialization
+
+    // Rekursio
     implementation project(':rekursio-rest-i18n')
+
+    // Ktor
+    implementation common_libraries.ktor
 }

@@ -5,6 +5,7 @@ ext {
     ]
 
     local_libraries_versions = [
+            dagger          : '2.29.1',
             logback_classic : '1.2.3'
     ]
 
@@ -13,6 +14,8 @@ ext {
     ]
 
     local_libraries = [
+            dagger              : "com.google.dagger:dagger:${local_libraries_versions.dagger}",
+            dagger_compiler     : "com.google.dagger:dagger-compiler:${local_libraries_versions.dagger}",
             ktor_netty          : "io.ktor:ktor-server-netty:${common_libraries_versions.ktor}",
             ktor_auth           : "io.ktor:ktor-auth:${common_libraries_versions.ktor}",
             logback_classic     : "ch.qos.logback:logback-classic:${local_libraries_versions.logback_classic}"
