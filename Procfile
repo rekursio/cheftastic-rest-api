@@ -1,1 +1,1 @@
-web: java -jar cheftastic-api/build/libs/cheftastic-api-1.0.0.jar
+web: java -jar cheftastic-backend/build/libs/cheftastic-backend-1.0.0.jar
