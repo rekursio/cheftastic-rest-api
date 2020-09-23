@@ -36,6 +36,11 @@ dependencies {
     implementation common_libraries.ktor_serialization
     implementation local_libraries.ktor_auth
 
+    // Modules
+    implementation project(':cheftastic-backend-api')
+    implementation project(':cheftastic-backend-domain')
+    implementation project(':cheftastic-backend-data')
+
     // Rekursio
     implementation project(':rekursio-rest-security')
     implementation project(':rekursio-rest-error')
