@@ -1,0 +1,14 @@
+apply plugin: 'kotlin'
+apply plugin: 'kotlin-kapt'
+
+// Library dependencies
+dependencies {
+    implementation libraries.kotlin
+
+    // Dagger
+    kapt local_libraries.dagger_compiler
+    implementation local_libraries.dagger
+
+    // Rekursio
+    implementation project(':rekursio-rest-i18n')
+}
