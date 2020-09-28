@@ -9,7 +9,7 @@ import io.ktor.features.*
 import io.ktor.http.*
 import io.ktor.routing.*
 import io.ktor.serialization.*
-import io.rekursio.rest.error.restErrors
+import io.rekursio.rest.error.ktx.restErrors
 import io.rekursio.rest.i18n.I18n
 import io.rekursio.rest.security.Security
 import io.rekursio.rest.security.ktx.hasRole
