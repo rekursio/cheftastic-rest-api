@@ -1,10 +1,12 @@
 package app.cheftastic.backend.domain.security.service
 
+import app.cheftastic.backend.domain.di.DomainScope
 import app.cheftastic.backend.domain.security.configuration.Role
 import io.rekursio.rest.security.AuthenticationService
 import io.rekursio.rest.security.Principal
 import javax.inject.Inject
 
+@DomainScope
 class AuthenticationServiceImpl @Inject constructor() : AuthenticationService {
 
     override fun authenticateWithUsernameAndPassword(username: String, password: String): Principal? =

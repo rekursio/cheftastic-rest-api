@@ -7,14 +7,10 @@ apply plugin: 'com.github.johnrengelman.shadow'
 group   lib_config.group
 version lib_config.version
 
-// Ktor configuration
+// Source compatibility configuration
 sourceCompatibility = lib_config.source_compatibility
-compileKotlin {
-    kotlinOptions.jvmTarget = "${lib_config.source_compatibility}"
-}
-compileTestKotlin {
-    kotlinOptions.jvmTarget = "${lib_config.source_compatibility}"
-}
+compileKotlin { kotlinOptions.jvmTarget = "${lib_config.source_compatibility}" }
+compileTestKotlin { kotlinOptions.jvmTarget = "${lib_config.source_compatibility}" }
 
 shadowJar {
     manifest {

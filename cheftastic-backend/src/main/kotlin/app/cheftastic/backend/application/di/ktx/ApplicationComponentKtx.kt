@@ -1,7 +1,8 @@
-package app.cheftastic.backend.application.di
+package app.cheftastic.backend.application.di.ktx
 
 import app.cheftastic.backend.api.controller.DummyController
 import app.cheftastic.backend.api.di.DaggerApiComponent
+import app.cheftastic.backend.application.di.DaggerApplicationComponent
 import app.cheftastic.backend.data.di.DaggerDataComponent
 import app.cheftastic.backend.domain.di.DaggerDomainComponent
 import io.rekursio.rest.i18n.I18nDataSource

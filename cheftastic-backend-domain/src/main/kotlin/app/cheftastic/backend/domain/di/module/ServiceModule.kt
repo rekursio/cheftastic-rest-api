@@ -1,6 +1,5 @@
 package app.cheftastic.backend.domain.di.module
 
-import app.cheftastic.backend.domain.di.DomainScope
 import app.cheftastic.backend.domain.dummy.service.DummyService
 import app.cheftastic.backend.domain.dummy.service.DummyServiceImpl
 import app.cheftastic.backend.domain.security.service.AuthenticationServiceImpl
@@ -12,11 +11,9 @@ import io.rekursio.rest.security.AuthenticationService
 interface ServiceModule {
 
     @Binds
-    @DomainScope
     fun bindDummyService(service: DummyServiceImpl): DummyService
 
     @Binds
-    @DomainScope
     fun bindAuthenticationService(service: AuthenticationServiceImpl): AuthenticationService
 
 }
