@@ -6,8 +6,10 @@ ext {
     ]
 
     common_libraries_versions = [
+            kmongo                  : '4.1.2',
             kotlin_serialization    : '0.20.0',
             ktor                    : '1.3.2',
+            typesafe_config         : '1.4.0',
 
             // Test
             mockito_kotlin          : '2.2.0'
@@ -16,9 +18,11 @@ ext {
     common_gradle_plugins = []
 
     common_libraries = [
+            kmongo                  : "org.litote.kmongo:kmongo:${common_libraries_versions.kmongo}",
             kotlin_serialization    : "org.jetbrains.kotlinx:kotlinx-serialization-runtime:${common_libraries_versions.kotlin_serialization}",
             ktor                    : "io.ktor:ktor-server-core:${common_libraries_versions.ktor}",
             ktor_serialization      : "io.ktor:ktor-serialization:${common_libraries_versions.ktor}",
+            typesafe_config         : "com.typesafe:config:${common_libraries_versions.typesafe_config}",
 
             // Test
             kotlin_test_junit       : "org.jetbrains.kotlin:kotlin-test-junit:${kotlin_version}",

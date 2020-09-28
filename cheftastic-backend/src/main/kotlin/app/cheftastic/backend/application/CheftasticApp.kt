@@ -1,8 +1,8 @@
 package app.cheftastic.backend.application
 
-import app.cheftastic.backend.application.di.authenticationService
-import app.cheftastic.backend.application.di.dummyController
-import app.cheftastic.backend.application.di.i18nDataSource
+import app.cheftastic.backend.application.di.ktx.authenticationService
+import app.cheftastic.backend.application.di.ktx.dummyController
+import app.cheftastic.backend.application.di.ktx.i18nDataSource
 import app.cheftastic.backend.domain.security.configuration.Role
 import io.ktor.application.*
 import io.ktor.features.*

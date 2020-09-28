@@ -4,4 +4,5 @@ package app.cheftastic.backend.data.source
 interface DummyDataSource {
 
     fun foo(): String
+
 }
