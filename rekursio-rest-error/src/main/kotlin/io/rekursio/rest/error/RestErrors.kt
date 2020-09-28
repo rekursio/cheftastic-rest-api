@@ -1,14 +1,9 @@
 package io.rekursio.rest.error
 
-import io.ktor.application.*
-import io.ktor.features.*
-import io.rekursio.rest.error.ktx.fail
+import org.slf4j.LoggerFactory
 
-/**
- * Ktor StatusPages configuration for handling REST errors.
- */
-fun StatusPages.Configuration.restErrors() {
-    exception<Throwable> { throwable ->
-        call.fail(throwable)
-    }
+object RestErrors {
+
+    internal val logger = LoggerFactory.getLogger(RestErrors::class.java)
+
 }
