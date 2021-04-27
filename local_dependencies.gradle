@@ -1,11 +1,11 @@
 ext {
 
     local_gradle_plugins_versions = [
-            shadowJar       : '2.0.4'
+            shadowJar       : '6.1.0'
     ]
 
     local_libraries_versions = [
-            dagger          : '2.29.1',
+            dagger          : '2.35',
             logback_classic : '1.2.3'
     ]
 

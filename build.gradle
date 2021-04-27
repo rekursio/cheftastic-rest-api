@@ -1,7 +1,9 @@
+apply plugin: "com.github.ben-manes.versions"
+
 buildscript {
 
-    apply from: 'https://raw.githubusercontent.com/rekursio/rest-kotlin-remote-config/8c79ded/configuration.gradle'
-    apply from: 'https://raw.githubusercontent.com/rekursio/rest-kotlin-remote-config/8c79ded/dependencies.gradle'
+    apply from: 'https://raw.githubusercontent.com/rekursio/rest-kotlin-remote-config/main/configuration.gradle'
+    apply from: 'https://raw.githubusercontent.com/rekursio/rest-kotlin-remote-config/main/dependencies.gradle'
 
     // TODO: Remove once it's moved to rest-kotlin-remote dependencies.gradle
     apply from: 'common_dependencies.gradle'
@@ -13,11 +15,13 @@ buildscript {
         classpath gradle_plugins.kotlin_gradle_plugin
         classpath common_gradle_plugins_versions.kotlin_serialization
         classpath local_gradle_plugins.shadowJar
+
+        classpath gradle_plugins.versions_gradle_plugin
     }
 
     repositories {
         mavenCentral()
-        jcenter()
+        gradlePluginPortal()
     }
 
 }
