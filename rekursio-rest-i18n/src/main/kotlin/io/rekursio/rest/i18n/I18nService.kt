@@ -2,7 +2,6 @@ package io.rekursio.rest.i18n
 
 import java.lang.reflect.Field
 import java.util.*
-import kotlin.collections.ArrayList
 import kotlin.reflect.KFunction
 import kotlin.reflect.full.declaredFunctions
 import kotlin.reflect.full.memberProperties
@@ -91,7 +90,7 @@ internal class I18nService(
      * @return Field value translated.
      */
     private fun translate(target: Any?, field: Field?, locale: Locale): Any? {
-        if (field == null) {
+        if (target == null || field == null) {
             return null
         }
 
@@ -105,14 +104,23 @@ internal class I18nService(
         // Restore actual accessibility level
         field.isAccessible = isAccessible
 
-        return if (value is String) {
-            if (field.getAnnotationsByType(I18nField::class.java).isNotEmpty()) {
-                dataSource.getMessage(value, locale)
-            } else {
+        return when {
+            value is String -> {
+                if (field.getAnnotationsByType(I18nField::class.java).isNotEmpty()) {
+                    dataSource.getMessage(value, locale)
+                } else {
+                    value
+                }
+            }
+
+            // Avoid recursive loops
+            target.javaClass.name == value.javaClass.name || value.javaClass.name.startsWith("java.lang") -> {
                 value
             }
-        } else {
-            translate(value, locale)
+
+            else -> {
+                translate(value, locale)
+            }
         }
     }
 

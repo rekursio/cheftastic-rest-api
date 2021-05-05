@@ -2,6 +2,7 @@ package io.rekursio.rest.i18n.model
 
 import io.rekursio.test.factory.ModelFactory
 import io.rekursio.test.random.nextString
+import java.time.OffsetDateTime
 import kotlin.random.Random
 
 object ClassAModelFactory : ModelFactory<ClassA> {
@@ -10,6 +11,7 @@ object ClassAModelFactory : ModelFactory<ClassA> {
         ClassA(
             Random.nextString(),
             Random.nextString(),
-            Random.nextString()
+            Random.nextString(),
+            OffsetDateTime.now()
         )
 }
